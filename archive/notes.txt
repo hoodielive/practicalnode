@@ -1,0 +1,12 @@
+Notes:
+
+# How to install node without needing sudoers for npm installs 
+
+1. mkdir node-install 
+2. curl <http> 
+3. cd node-install
+4. ./configure --prefix=<path> 
+5. make altinstall or install <altinstall if you already have node installed and don't want to overwrite the binary> 
+6. curl https://<npm>/install | sh 
+
+
