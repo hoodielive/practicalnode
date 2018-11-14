@@ -24,22 +24,24 @@ app.get('/item/:id', (req, res) => {
   console.log('Did you get the right data?')
 );
 
-app.post('/post', (req, res) => {
-  res.send('a post request for new item');
-}); 
-
-app.get('/images', (req, res) => {
-  res.download('images/melissa.jpg')
- // res.redirect('http://youtube.com');
- // res.end();
-})
-
-app.put('/put', (req, res) => {
-  res.send('a put request for new item');
-}); 
-
-app.delete('/del', (req, res) => {
-  res.send('a delete request for new item');
+/** 
+ * check out www.expressjs.com/en/guide for routing method(s)
+ * res.download('images/melissa.jpg')
+ * res.redirect('http://youtube.com');
+ * res.end();
+*/
+app.route('/item') 
+  .get((req, res) => {
+    res.send('A get request to /item')
+   }) 
+  .post((req, res) => {
+    res.send('a post request for new item');
+  })
+  .put((req, res) => {
+    res.send('a put request for new item');
+  })
+  .delete((req, res) => {
+    res.send('a delete request for new item');
 }); 
 
 /** Server stuff. **/ 
