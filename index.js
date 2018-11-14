@@ -12,6 +12,9 @@ app.use('/images', express.static('images'));
 app.use(express.json());  // { "hello": "JSON is cool" }; 
 app.use(express.urlencoded( { extend: true }));  // hello=URLEncoded+is+cool
 
+/** Set up Proxies */
+app.set('trust proxy', 'loopback'); 
+
 /** Default route for index **/ 
 app.get('/', (req, res) => {
   res.json(data);
