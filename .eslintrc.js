@@ -24,6 +24,8 @@ module.exports = {
             "error",
             "always"
         ],
-        "no-console": "off", 
-    }
-};
+        "no-console": "off",
+        "eslintConfig": {
+          "no-unused-vars": [ "error", { "argsIgnorePattern": "next" }]},
+  }
+}
