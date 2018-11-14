@@ -1,10 +1,13 @@
 
 const express = require('express'); 
 const app = express(); 
+const favicon = require('serve-favicon'); 
+const path = require('path'); 
 const data = require('./data/data');
 
 /** allows you to serve static content **/
 app.use(express.static('./public')); 
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico'))); 
 app.use('/images', express.static('images'));
 app.use(express.json());  // { "hello": "JSON is cool" }; 
 app.use(express.urlencoded( { extend: true }));  // hello=URLEncoded+is+cool
@@ -46,8 +49,8 @@ app.get('/item/:id', (req, res, next) => {
 */
 app.route('/item') 
   .get((req, res) => {
-    throw new Error(); 
-    //res.send('A get request to /item')
+    //throw new Error(); 
+    res.send('A get request to /item')
    }) 
   .post((req, res) => {
     res.send('a post request for new item');
@@ -69,5 +72,4 @@ const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
-  console.log(data);
 }); 
