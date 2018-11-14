@@ -6,10 +6,17 @@ const data = require('./data/data');
 /** allows you to serve static content **/
 app.use(express.static('./public')); 
 app.use('/images', express.static('images'));
+app.use(express.json());  // { "hello": "JSON is cool" }; 
+app.use(express.urlencoded( { extend: true }));  // hello=URLEncoded+is+cool
 
 /** Default route for index **/ 
 app.get('/', (req, res) => {
   res.json(data);
+}); 
+
+app.post('/newItem', (req, res) => {
+  console.log(req.body);
+  res.send(req.body); 
 }); 
 
 /** this is a route **/ 
@@ -39,7 +46,8 @@ app.get('/item/:id', (req, res, next) => {
 */
 app.route('/item') 
   .get((req, res) => {
-    res.send('A get request to /item')
+    throw new Error(); 
+    //res.send('A get request to /item')
    }) 
   .post((req, res) => {
     res.send('a post request for new item');
@@ -51,6 +59,11 @@ app.route('/item')
     res.send('a delete request for new item');
 }); 
 
+/** Error Handling */
+app.use((err, req, res, next) => {
+  console.error(err.stack); 
+  res.status(500).send(`Red alert! Red alert: ${err.stack}`); 
+}); 
 /** Server stuff. **/ 
 const port = process.env.PORT || 3000; 
 
