@@ -9,7 +9,7 @@
  * Used when reading from a file system or receiving packets over a network 
  */ 
 
-const bufFromArray = Buffer.from([0x62, 0x75, 0x66, 0x65, 0x72])
+const bufFromArray = Buffer.from([0x62, 0x75, 0x66, 0x66, 0x65, 0x72])
 console.log(bufFromArray.toString())
 
 const arrayBuffer = new Uint16Array(2)
