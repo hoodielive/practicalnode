@@ -3,7 +3,7 @@ class baseModel {
         this.name = 'Base';
         this.url = 'http://local.dev';
         this.data = data;
-        this.options = options; 
+        this.options = options;
     }
     getName() {
         console.log(`Class name: ${this.name}`);
@@ -14,10 +14,10 @@ class AccountModel extends baseModel {
     constructor(options, data) {
         super({ private: true }, ['32113123123', '524214691'])
         this.name = 'Account Model';
-        this.url  +='/accounts/'; 
+        this.url  +='/accounts/';
     }
     get accountsData() {
-        return this.data; 
+        return this.data;
     }
 }
 
