@@ -12,7 +12,7 @@ class baseModel {
 
 class AccountModel extends baseModel {
     constructor(options, data) {
-        super({ private: true }, ['32113123123', '524214691'])
+        super({ private: true }, ['32113123123', '524214691']); 
         this.name = 'Account Model';
         this.url  +='/accounts/';
     }
