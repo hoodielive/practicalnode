@@ -1,0 +1,15 @@
+NodeJS 
+
+global.process* 
+  process.pid -> Process IDs 
+  process.argv -> a list of commandline args supplied to this process 
+  process.env -> a list of environment variables 
+  process.platform -> Platform name, such as darwin for macOS
+  process.release -> node's release URL 
+  process.versions -> a list of versions of Google's Chrome V8, zlib, uv, etc., 
+  process.stdin() -> the standard output for reading 
+  process.stdout() -> the standard output for writing 
+  process.uptime() -> time of how long a process is running 
+  process.memoryUsage() -> resident set size, total heap and used 
+  process.exit() -> terminating this process 
+  process.kill() -> terminate of another process 
