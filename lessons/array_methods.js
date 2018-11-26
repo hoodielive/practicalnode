@@ -15,4 +15,4 @@ console.log(happy_array.push('43'));
 console.log(happy_array.shift());
 console.log(happy_array);
 console.log(happy_array.unshift());
-console.log(happy_array); 
+console.log(happy_array);
