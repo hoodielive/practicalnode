@@ -39,11 +39,12 @@ let favoriteSeries = [
   "The Walking Dead",
 ];
 
-let yourFavoriteSeries = prompt("What's your favorite movies?");
+var yourFavoriteSeries = ['Cursed', 'Web of Lies'];
 
-if (favoriteSeries.indexOf(yourFavoriteSeries > -1)) {
+if (favoriteSeries.indexOf(yourFavoriteSeries ) > -1) {
   console.log(`Oh, cool, I've heard of ${yourFavoriteSeries}!`);
 }
 else {
   console.log(`I haven't heard of ${yourFavoriteSeries} but I will check it out!`);
 };
+
