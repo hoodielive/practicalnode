@@ -26,24 +26,24 @@ console.log(joiner.indexOf(1));
 
 // usually see this function (indexOf) very commonly used to check if an element is in an array or not
 let favoriteSeries = [
-    "The Originals",
-    "The Vampire Diaries",
-    "Legacies",
-    "The Last Kingdom",
-    "Merlin",
-    "Sanford and Son",
-    "The Tudors",
-    "The Vikings",
-    "Jessica Jones",
-    "The Rain",
-    "The Walking Dead",
+  "The Originals",
+  "The Vampire Diaries",
+  "Legacies",
+  "The Last Kingdom",
+  "Merlin",
+  "Sanford and Son",
+  "The Tudors",
+  "The Vikings",
+  "Jessica Jones",
+  "The Rain",
+  "The Walking Dead",
 ];
 
 let yourFavoriteSeries = prompt("What's your favorite movies?");
 
 if (favoriteSeries.indexOf(yourFavoriteSeries > -1)) {
-    console.log(`Oh, cool, I've heard of ${yourFavoriteSeries}!`);
+  console.log(`Oh, cool, I've heard of ${yourFavoriteSeries}!`);
 }
 else {
-    console.log(`I haven't heard of ${yourFavoriteSeries} but I will check it out!`);
+  console.log(`I haven't heard of ${yourFavoriteSeries} but I will check it out!`);
 };
