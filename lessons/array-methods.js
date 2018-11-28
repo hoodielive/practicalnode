@@ -48,3 +48,21 @@ else {
   console.log(`I haven't heard of ${yourFavoriteSeries} but I will check it out!`);
 };
 
+// lastIndexOf works like indexOf, but starts searching from the end of the array rather than the beginning
+console.log(favoriteSeries.lastIndexOf('Merlin'));
+
+// theres a difference between primitives and objects and thus reference types
+let instructor = 'Osa';
+let anotherInstructor = instructor;
+console.log(instructor);
+console.log(anotherInstructor);
+anotherInstructor = 'Osi';
+console.log(instructor);
+console.log(anotherInstructor);
+
+// now with reference
+let instructors = ['Osa', 'Ori'];
+let instructorsCopy = instructors;
+console.log(instructors, instructorsCopy);
+instructorsCopy.push("Uri");
+console.log(instructors, instructorsCopy);
