@@ -21,7 +21,7 @@ console.log(combinedArrays);
 let joiner = ["hello", "hell"];
 console.log(joiner.join(" "));
 
-// indexOf finds the 'first' index of the element passed in (starting from the left)
+// indexOf finds the "first" index of the element passed in (starting from the left)
 console.log(joiner.indexOf(1));
 
 // usually see this function (indexOf) very commonly used to check if an element is in an array or not
@@ -39,30 +39,55 @@ let favoriteSeries = [
   "The Walking Dead",
 ];
 
-var yourFavoriteSeries = ['Cursed', 'Web of Lies'];
+var yourFavoriteSeries = ["Cursed", "Web of Lies"];
 
 if (favoriteSeries.indexOf(yourFavoriteSeries ) > -1) {
-  console.log(`Oh, cool, I've heard of ${yourFavoriteSeries}!`);
+  console.log(`Oh, cool, I"ve heard of ${yourFavoriteSeries}!`);
 }
 else {
-  console.log(`I haven't heard of ${yourFavoriteSeries} but I will check it out!`);
+  console.log(`I haven"t heard of ${yourFavoriteSeries} but I will check it out!`);
 };
 
 // lastIndexOf works like indexOf, but starts searching from the end of the array rather than the beginning
-console.log(favoriteSeries.lastIndexOf('Merlin'));
+console.log(favoriteSeries.lastIndexOf("Merlin"));
 
 // theres a difference between primitives and objects and thus reference types
-let instructor = 'Osa';
+let instructor = "Osa";
 let anotherInstructor = instructor;
 console.log(instructor);
 console.log(anotherInstructor);
-anotherInstructor = 'Osi';
+anotherInstructor = "Osi";
 console.log(instructor);
 console.log(anotherInstructor);
 
 // now with reference
-let instructors = ['Osa', 'Ori'];
+let instructors = ["Osa", "Ori"];
 let instructorsCopy = instructors;
 console.log(instructors, instructorsCopy);
 instructorsCopy.push("Uri");
 console.log(instructors, instructorsCopy);
+
+// create an empty array
+let anotherEmptyArray = []; 
+anotherEmptyArray.push("Lawrence"); 
+console.log(anotherEmptyArray); 
+anotherEmptyArray.push("Solomon"); 
+console.log(anotherEmptyArray); 
+anotherEmptyArray.unshift("black"); 
+console.log(anotherEmptyArray); 
+anotherEmptyArray.shift();
+console.log(anotherEmptyArray); 
+let _anotherEmptyArray = [];
+_anotherEmptyArray.push(7); 
+console.log(_anotherEmptyArray); 
+_anotherEmptyArray.push("Javascript"); 
+console.log(_anotherEmptyArray); 
+
+if (_anotherEmptyArray.indexOf(7)) {
+  console.log("Your favorite number is" + _anotherEmptyArray[0]); 
+}
+else {
+  console.log("I am sorry, but your favorite number has not been revealed"); 
+}; 
+
+
