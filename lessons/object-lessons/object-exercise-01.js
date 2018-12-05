@@ -9,5 +9,16 @@ var namesAndHobbies = {
 }
 
 for (singlekey in namesAndHobbies) {
-  console.log(namesAndHobbies[singlekey])
+  console.log(namesAndHobbies[singlekey]); 
 }
+
+// Add your name and hobby to the existing object
+namesAndHobbies.larry = "programming"; 
+console.log(namesAndHobbies); 
+
+// write your hobby to stdout if your name is found in obj
+
+if ("larry" in namesAndHobbies) {
+  console.log(namesAndHobbies.larry); 
+}
+
