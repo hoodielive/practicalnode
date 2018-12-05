@@ -14,3 +14,31 @@ function randomFood() {
   return console.log(favoriteFoods[varIndex]);
 }
 randomFood(); 
+
+// Create a variable called numbers which is an array that contains the numbers 1 through 10
+let numbers = [1,2,3,4,5,6,7,8,9,10]; 
+
+// write a function that console.logs all the odd numbers of numbers array.
+function oddNumbers() {
+  for (let i = 0; i < numbers.length; i++) {
+    if(numbers[i] % 2 !== 0) {
+      console.log(numbers[i]);  
+    } 
+  }
+}
+oddNumbers(); 
+// write a function that console.logs all the even numbers of the numbers array.
+function evenNumbers() {
+  if(numbers[i] % 2 === 0) {
+    console.log(numbers[i]);  
+  }
+}
+evenNumbers();
+// Create a function called returnFirstOddNumber
+function firstOddNum() {
+  if(numbers[i] % 2 === 0) {
+    return(numbers[i]); 
+  }
+}
+
+
