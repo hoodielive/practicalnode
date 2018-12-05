@@ -27,18 +27,46 @@ function oddNumbers() {
   }
 }
 oddNumbers(); 
+
 // write a function that console.logs all the even numbers of the numbers array.
 function evenNumbers() {
-  if(numbers[i] % 2 === 0) {
-    console.log(numbers[i]);  
+    for (let i = 0; i < numbers.length; i++) {
+      if(numbers[i] % 2 === 0) {
+        console.log(numbers[i]);  
+    }
   }
 }
 evenNumbers();
+
 // Create a function called returnFirstOddNumber
 function firstOddNum() {
-  if(numbers[i] % 2 === 0) {
-    return(numbers[i]); 
+    for (let i = 0; i < numbers.length; i++) {
+      if(numbers[i] % 2 !== 0) {
+        return(numbers[i]); 
+    }
+  }
+}
+firstOddNum(); 
+
+// Create a function called returnFirstEvenNumber
+function firstEvenNum() {
+    for (let i = 0; i < numbers.length; i++) {
+      if(numbers[i] % 2 === 0) {
+        return(numbers[i]) 
+    }
   }
 }
 
+firstEvenNum(); 
 
+// Create a function that returns the first Half of numbers 
+function firstHalf() {
+  return numbers.slice(0, numbers.length/2); 
+}
+
+firstHalf(); 
+
+function secondHalf() {
+  return numbers.slice(0, numbers.length/2);
+}
+secondHalf(); 
