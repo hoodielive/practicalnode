@@ -31,3 +31,21 @@ for ( let i = 0; i < people.length; i++) {
 // write a command to make a copy of the array using slice. The copy should not include the 1st and 2nd index
 let newPeople = people.slice(2, 4);
 console.log(newPeople); 
+
+// write a command that gives the indexOf of where "jothi" is.
+console.log(people.indexOf("jothi")); 
+
+// write a command that gives the indexOf where "Foo" is. This should return -1
+console.log(people.indexOf("Foo")); 
+
+// redefine the people variable with the value you started with. 
+people = ["osa", "jothi", "rasuu", "blemort"];
+console.log(people)
+
+// use splice to remove rasuu and insert padro and cortez in its place
+people.splice(2, 1, "padro", "cortez"); 
+console.log(people); 
+
+// create new var and set it equal to the people array concatenated with the string 'blue'
+let newVar = people.concat("blue"); 
+console.log(newVar); 
